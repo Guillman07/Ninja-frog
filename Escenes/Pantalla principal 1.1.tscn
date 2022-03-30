@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Escenes/Pantalla principal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenes/Interface.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" instance=ExtResource( 2 )]
+
+[node name="Interface" parent="." index="4" instance=ExtResource( 3 )]
+
+[node name="startuptimer" type="Timer" parent="." index="5"]
+wait_time = 2.0
+
+[connection signal="start_game" from="Interface" to="KinematicBody2D" method="new_game"]
