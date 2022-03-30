@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Escenes/Terra.gd" type="Script" id=1]
@@ -16,3 +17,15 @@ shape = SubResource( 1 )
 modulate = Color( 0.419608, 0.196078, 0.0980392, 1 )
 margin_right = 221.0
 margin_bottom = 23.0
+=======
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 17, 10 )
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7, 0 )
+shape = SubResource( 1 )
+>>>>>>> fe96d1e8dafdfbeb42137e6d98a769d8e032472b
