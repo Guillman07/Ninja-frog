@@ -44,16 +44,17 @@ func animation(speed):
 	if speed.y < -2:
 		$ninja_frog.play("jump")
 	
+func _on_Spikes_body_entered(body):
+	$ninja_frog.play("hit")
+	hide()
+	emit_signal("hit")
+	$CollisionShape2D.disabled = true
+	
 
-#func colisio()
-	#$ninja_frog.play("hit")
-	#hide()
-	#emit_signal("hit")
-	#$CollisionShape2D.disabled = true
-#func start(pos):
+func start(pos):
 	#position = pos
-	#show()
-	#$CollisionShape2D.disabled = false
+	show()
+	$CollisionShape2D.disabled = false
 	
 #func _on_Portal_body_entered(body):
 	#get_tree().change_scene("res://escenes/escena 2d.tscn")

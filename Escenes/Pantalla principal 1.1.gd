@@ -7,3 +7,6 @@ func new_game():
 
 func game_over():
 	$Interface.game_over()
+
+
+

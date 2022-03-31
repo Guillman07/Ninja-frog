@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Escenes/Personatge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/Terra.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Escenes/Personatge.gd" type="Script" id=4]
 [ext_resource path="res://Escenes/Obstacle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Escenes/Pantalla principal 1.1.gd" type="Script" id=6]
+[ext_resource path="res://Escenes/sad brick.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Escenes/saw.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 6 )
@@ -21,3 +23,11 @@ position = Vector2( 500, 466 )
 
 [node name="Spikes" parent="." instance=ExtResource( 5 )]
 position = Vector2( 774, 568 )
+
+[node name="sad brick" parent="." instance=ExtResource( 7 )]
+position = Vector2( 635, 560 )
+
+[node name="saw" parent="." instance=ExtResource( 8 )]
+position = Vector2( 307, 374 )
+
+[connection signal="body_entered" from="Spikes" to="." method="_on_Spikes_body_entered"]
