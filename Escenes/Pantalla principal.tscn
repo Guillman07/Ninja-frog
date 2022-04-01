@@ -106,14 +106,11 @@ position = Vector2( 540, 315 )
 [node name="saw2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 459, 139 )
 
-[node name="Position2D" parent="." instance=ExtResource( 9 )]
-position = Vector2( 31, 371 )
-
 [node name="Spiked_ball" parent="." instance=ExtResource( 11 )]
 position = Vector2( 343, 570 )
 
 [node name="Spiked_ball2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 451, 569 )
+position = Vector2( 449, 569 )
 
 [node name="Portal" parent="." instance=ExtResource( 10 )]
 position = Vector2( 935, 94 )
@@ -121,6 +118,9 @@ rotation = 0.0404514
 
 [node name="Welcome_guy" parent="." instance=ExtResource( 12 )]
 position = Vector2( 738, 556 )
+
+[node name="Position2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 31, 371 )
 
 [connection signal="hit" from="KinematicBody2D" to="." method="game_over"]
 [connection signal="body_entered" from="Spikes" to="." method="_on_Spikes_body_entered"]
@@ -132,4 +132,5 @@ position = Vector2( 738, 556 )
 [connection signal="body_entered" from="Spikes7" to="." method="_on_Spikes_body_entered"]
 [connection signal="body_entered" from="saw2" to="." method="_on_saw_body_entered"]
 [connection signal="body_entered" from="Spiked_ball2" to="." method="_on_Spiked_ball_body_entered"]
+[connection signal="body_entered" from="Portal" to="." method="_on_Portal_body_entered"]
 [connection signal="body_entered" from="Welcome_guy" to="." method="_on_Welcome_guy_body_entered"]

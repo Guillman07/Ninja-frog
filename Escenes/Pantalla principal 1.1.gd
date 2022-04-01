@@ -35,4 +35,5 @@ func _on_Spiked_ball_body_entered(body):
 func _on_Welcome_guy_body_entered(body):
 	$Welcome_guy/Dialoge.show()
 	
-	
+func _on_Portal_body_entered(body):
+	get_tree().change_scene("res://Escenes/Level1.tscn")
