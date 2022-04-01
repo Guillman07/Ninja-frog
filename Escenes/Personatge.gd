@@ -8,7 +8,9 @@ var jump_speed = -400
 var left_jumps = 1
 signal hit
 
-
+func _ready():
+	hide()
+	
 func _physics_process(delta):
 	#position += speed * direccio * delta
 	speed.x = 0
@@ -44,17 +46,11 @@ func animation(speed):
 	if speed.y < -2:
 		$ninja_frog.play("jump")
 	
-func _on_Spikes_body_entered(body):
-	$ninja_frog.play("hit")
-	hide()
-	emit_signal("hit")
-	$CollisionShape2D.disabled = true
-	
-
 func start(pos):
-	#position = pos
+	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+	
 	
 #func _on_Portal_body_entered(body):
 	#get_tree().change_scene("res://escenes/escena 2d.tscn")

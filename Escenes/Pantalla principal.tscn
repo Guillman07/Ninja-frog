@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Escenes/Personatge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/Terra.tscn" type="PackedScene" id=2]
@@ -8,6 +8,10 @@
 [ext_resource path="res://Escenes/Pantalla principal 1.1.gd" type="Script" id=6]
 [ext_resource path="res://Escenes/sad brick.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Escenes/saw.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenes/Position2D.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Escenes/Portal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Escenes/Spiked_ball.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Escenes/Welcome_guy.tscn" type="PackedScene" id=12]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 6 )
@@ -15,19 +19,117 @@ script = ExtResource( 6 )
 [node name="Terra" parent="." instance=ExtResource( 2 )]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 505, 403 )
+position = Vector2( 402, 409 )
 script = ExtResource( 4 )
 
 [node name="Plataforma" parent="." instance=ExtResource( 3 )]
-position = Vector2( 500, 466 )
+position = Vector2( 576, 491 )
+
+[node name="Plataforma2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 658, 318 )
+
+[node name="Plataforma3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 845, 368 )
+
+[node name="Plataforma4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 695, 440 )
+
+[node name="Plataforma5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 424, 312 )
+
+[node name="Plataforma6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 324, 108 )
+
+[node name="Plataforma7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 113, 173 )
+
+[node name="Plataforma8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 264, 249 )
+
+[node name="Plataforma9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 600, 133 )
+
+[node name="Plataforma10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 782, 183 )
 
 [node name="Spikes" parent="." instance=ExtResource( 5 )]
-position = Vector2( 774, 568 )
+position = Vector2( 215, 571 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 888, 337 )
+
+[node name="Spikes3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 616, 459 )
+
+[node name="Spikes4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1001, 568 )
+
+[node name="Spikes5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 991, 343 )
+rotation = -3.15453
+
+[node name="Spikes6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 946, 295 )
+rotation = -1.59886
+
+[node name="Spikes7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 384, 283 )
+rotation = -0.0037483
 
 [node name="sad brick" parent="." instance=ExtResource( 7 )]
-position = Vector2( 635, 560 )
+position = Vector2( 31, 569 )
+
+[node name="sad brick2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 31, 505 )
+
+[node name="sad brick3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 94, 505 )
+
+[node name="sad brick4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 94, 569 )
+
+[node name="sad brick5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 31, 442 )
+
+[node name="sad brick6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 158, 569 )
+
+[node name="sad brick7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 395, 561 )
+
+[node name="sad brick8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 991, 287 )
 
 [node name="saw" parent="." instance=ExtResource( 8 )]
-position = Vector2( 307, 374 )
+position = Vector2( 540, 315 )
 
+[node name="saw2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 459, 139 )
+
+[node name="Position2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 31, 371 )
+
+[node name="Spiked_ball" parent="." instance=ExtResource( 11 )]
+position = Vector2( 343, 570 )
+
+[node name="Spiked_ball2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 451, 569 )
+
+[node name="Portal" parent="." instance=ExtResource( 10 )]
+position = Vector2( 935, 94 )
+rotation = 0.0404514
+
+[node name="Welcome_guy" parent="." instance=ExtResource( 12 )]
+position = Vector2( 738, 556 )
+
+[connection signal="hit" from="KinematicBody2D" to="." method="game_over"]
 [connection signal="body_entered" from="Spikes" to="." method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="Spikes2" to="." method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="Spikes3" to="." method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="Spikes4" to="." method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="Spikes5" to="." method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="Spikes6" to="." method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="Spikes7" to="." method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="saw2" to="." method="_on_saw_body_entered"]
+[connection signal="body_entered" from="Spiked_ball2" to="." method="_on_Spiked_ball_body_entered"]
+[connection signal="body_entered" from="Welcome_guy" to="." method="_on_Welcome_guy_body_entered"]
