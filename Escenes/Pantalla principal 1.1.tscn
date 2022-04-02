@@ -7,11 +7,6 @@
 
 [node name="Interface" parent="." index="0" instance=ExtResource( 3 )]
 
-[node name="startuptimer" type="Timer" parent="." index="5"]
-wait_time = 2.0
-
 [connection signal="start_game" from="Interface" to="." method="new_game"]
-[connection signal="timeout" from="startuptimer" to="." method="_on_startuptimer_timeout"]
 [connection signal="body_entered" from="saw" to="." method="_on_saw_body_entered"]
 [connection signal="body_entered" from="Spiked_ball" to="." method="_on_Spiked_ball_body_entered"]
-[connection signal="body_entered" from="Spiked_ball2" to="." method="_on_Spiked_ball2_body_entered"]

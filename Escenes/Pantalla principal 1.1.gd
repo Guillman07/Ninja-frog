@@ -11,29 +11,29 @@ func _on_saw_body_entered(body):
 	game_over()
 	$KinematicBody2D.hide()
 	$KinematicBody2D.emit_signal("hit")
-	$KinematicBody2D/CollisionShape2D.disabled = true
+	
 	
 func _on_Spikes_body_entered(body):
 	game_over()
 	$KinematicBody2D.hide()
 	$KinematicBody2D.emit_signal("hit")
-	$KinematicBody2D/CollisionShape2D.disabled = true
+	
 	
 func _on_fire_body_entered(body):
 	game_over()
 	$KinematicBody2D.hide()
 	$KinematicBody2D.emit_signal("hit")
-	$KinematicBody2D/CollisionShape2D.disabled = true
+	
 
 
 func _on_Spiked_ball_body_entered(body):
 	game_over()
 	$KinematicBody2D.hide()
 	$KinematicBody2D.emit_signal("hit")
-	$KinematicBody2D/CollisionShape2D.disabled = true
+	
 
 func _on_Welcome_guy_body_entered(body):
 	$Welcome_guy/Dialoge.show()
 	
 func _on_Portal_body_entered(body):
-	get_tree().change_scene("res://Escenes/Level1.tscn")
+	get_tree().change_scene("res://Escenes/World 2.tscn")

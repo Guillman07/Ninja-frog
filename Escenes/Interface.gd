@@ -11,10 +11,9 @@ func game_over():
 	show_message("Game Over")
 	yield($message_timer, "timeout")
 	$Sprite.show()
-	$Button.show()
 	$message.text = "Ninja frog"
 	$message.show()
-	
+	$Button.show()
 
 
 func _on_message_timer_timeout():

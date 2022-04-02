@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 var base_speed = 300
 var speed = Vector2.ZERO
 var direccio = Vector2.DOWN
@@ -9,7 +10,7 @@ var left_jumps = 1
 signal hit
 
 func _ready():
-	hide()
+	#hide()
 	pass
 func _physics_process(delta):
 	#position += speed * direccio * delta
@@ -45,13 +46,4 @@ func animation(speed):
 		
 	if speed.y < -2:
 		$ninja_frog.play("jump")
-	
-func start(pos):
-	position = pos
-	show()
-	#$CollisionShape2D.Disabled = false
-	
-#func _on_Area2D_body_entered(body):
-	#get_tree().change_scene("res://escenes/pantalla cossos.tscn")
-
 	

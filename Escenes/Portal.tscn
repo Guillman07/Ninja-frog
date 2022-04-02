@@ -51,7 +51,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 72.0069
+radius = 76.0066
 
 [node name="Portal" type="Area2D"]
 
@@ -59,7 +59,7 @@ radius = 72.0069
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 10
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
