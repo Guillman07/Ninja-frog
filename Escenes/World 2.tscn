@@ -1,27 +1,38 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Escenes/Personatge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/Plataforma.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escenes/Obstacle.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenes/PersonatgeWorld2.gd" type="Script" id=4]
 [ext_resource path="res://Escenes/World 2.gd" type="Script" id=5]
+[ext_resource path="res://Escenes/Terra_World2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Escenes/Gem.tscn" type="PackedScene" id=7]
 
 [node name="World 2" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
+[node name="Terra_World2" parent="Node2D" instance=ExtResource( 6 )]
+
 [node name="KinematicBody2D" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 492, 214 )
+position = Vector2( 63, 558 )
 script = ExtResource( 4 )
 
 [node name="Plataforma" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 488, 278 )
+position = Vector2( 463, 534 )
 
 [node name="Plataforma2" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 618, 276 )
+position = Vector2( 600, 488 )
 
 [node name="Spikes" parent="Node2D" instance=ExtResource( 3 )]
-position = Vector2( 659, 244 )
+position = Vector2( 640, 455 )
+
+[node name="Spikes2" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 992, 562 )
+
+[node name="Gem" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( 765, 374 )
 
 [connection signal="body_entered" from="Node2D/Spikes" to="." method="_on_Spikes_body_entered"]
+[connection signal="body_entered" from="Node2D/Spikes2" to="." method="_on_Spikes_body_entered"]
