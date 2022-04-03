@@ -52,6 +52,9 @@ position = Vector2( 600, 133 )
 [node name="Plataforma10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 782, 183 )
 
+[node name="Plataforma11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 883, 515 )
+
 [node name="Spikes" parent="." instance=ExtResource( 5 )]
 position = Vector2( 215, 571 )
 
@@ -62,7 +65,7 @@ position = Vector2( 888, 337 )
 position = Vector2( 616, 459 )
 
 [node name="Spikes4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1001, 568 )
+position = Vector2( 924, 483 )
 
 [node name="Spikes5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 991, 343 )
@@ -117,7 +120,7 @@ position = Vector2( 935, 94 )
 rotation = 0.0404514
 
 [node name="Welcome_guy" parent="." instance=ExtResource( 12 )]
-position = Vector2( 738, 556 )
+position = Vector2( 739, 556 )
 
 [node name="Position2D" parent="." instance=ExtResource( 9 )]
 position = Vector2( 31, 371 )
