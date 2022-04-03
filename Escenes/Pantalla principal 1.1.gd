@@ -36,4 +36,4 @@ func _on_Welcome_guy_body_entered(body):
 	$Welcome_guy/Dialoge.show()
 	
 func _on_Portal_body_entered(body):
-	get_tree().change_scene("res://Escenes/World 2.tscn")
+	get_tree().change_scene("res://Escenes/World_2.tscn")

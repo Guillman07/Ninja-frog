@@ -32,5 +32,9 @@ func _on_Spiked_ball_body_entered(body):
 	#$KinematicBody2D.hide()
 	#$KinematicBody2D.emit_signal("hit")
 
+func _on_Mask_dude_body_entered(body):
+	$Node2D/Mask_dude/Dialoge.show()
 
 
+func _on_Gem_body_entered(body):
+	get_tree().change_scene("res://Escenes/God_World.tscn")
